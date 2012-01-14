@@ -1,0 +1,17 @@
+import feature : feature ;
+import toolset : flags ;
+
+feature c-std : c89 c99 c1x : propagated ;
+
+flags clang-darwin.compile.c OPTIONS <c-std>c89 : -std=c89 : unchecked ;
+flags clang-darwin.compile.c OPTIONS <c-std>c99 : -std=c99 : unchecked ;
+flags clang-darwin.compile.c OPTIONS <c-std>c1x : -std=c1x : unchecked ;
+
+flags clang-linux.compile.c OPTIONS <c-std>c89 : -std=c89 : unchecked ;
+flags clang-linux.compile.c OPTIONS <c-std>c99 : -std=c99 : unchecked ;
+flags clang-linux.compile.c OPTIONS <c-std>c1x : -std=c1x : unchecked ;
+
+flags gcc.compile.c OPTIONS <c-std>c89 : -std=c89 : unchecked ;
+flags gcc.compile.c OPTIONS <c-std>c99 : -std=c99 : unchecked ;
+flags gcc.compile.c OPTIONS <c-std>c1x : -std=c1x : unchecked ;
+
